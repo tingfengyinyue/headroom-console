@@ -1,0 +1,8 @@
+services:
+  headroom-console:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_HEADROOM_URL=http://host.docker.internal:8787
+    restart: unless-stopped
